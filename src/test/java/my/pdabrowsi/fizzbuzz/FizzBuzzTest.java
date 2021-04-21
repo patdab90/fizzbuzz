@@ -56,16 +56,4 @@ public class FizzBuzzTest {
                 .isEqualTo(List.of("1", "2", "Fizz", "4", "Buzz", "Fizz", "Bizz", "8", "Fizz", "Buzz", "Gizz", "Fizz", "13", "Bizz", "FizzBuzz", "16", "17", "Fizz", "19", "Buzz"));
     }
 
-    @Test
-    public void withDuplicationMapping() {
-        //when
-        FizzBuzz subject = FizzBuzz.of(Mapping.of(3, "Buzz"), Mapping.of(3, "Fizz"));
-        List<String> result = subject.calculate(1, 11);
-
-        //then
-        assertThat(result)
-                .hasSize(20)
-                .isEqualTo(List.of("1", "2", "Fizz", "4", "5", "Fizz", "Bizz", "8", "Fizz", "10"));
-    }
-
 }
